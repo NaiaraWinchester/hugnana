@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abraço Virtual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>PARABÉNS DAVID!!</h1>
+  <p>Aceita um abraço virtual de Naiara?</p>
+  <a class="btn" href="https://youtu.be/YxiKoYYXbJg?si=2D2RSBFcunGg7cU4">Sim</a>
+  <a class="btn" id="noBtn" href="javascript:void(0);" onclick="showErrorMessage()">Não</a>
+  <script>
+    var clickCount = 0;
+
+    function showErrorMessage() {
+      clickCount++;
+      if (clickCount >= 3) {
+        document.getElementById('noBtn').innerHTML = 'Error 404, Nana vai te abraçar mesmo assim';
+        document.getElementById('noBtn').setAttribute('onclick', 'redirectToVideo()');
+      }
+    }
+
+    function redirectToVideo() {
+      window.location.href = 'https://youtu.be/YxiKoYYXbJg?si=2D2RSBFcunGg7cU4';
+    }
+  </script>
+</body>
+</html>
